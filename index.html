@@ -2,7 +2,8 @@
 <html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#002d62" />
   <title>D'Miguel Barber Shop | Barbershop in Washington Heights NYC | Dominican Barbershop</title>
   <meta name="description" content="Trendy barber shop in Washington Heights NYC. Haircuts, beard shaping, micro pigmentation, braids, manicures & pedicures. Dominican barbershop. Book your fade near me." />
   <meta name="keywords" content="Barbershop in Yonkers, Barbershop in Washington Heights, Dominican Barbershop, Fade haircut near me, D'Miguel Barber Shop, Barbería en Nueva York, haircut NYC" />
@@ -11,6 +12,7 @@
   <meta name="geo.placename" content="New York" />
   <meta name="geo.position" content="40.8526;-73.9352" />
   <meta name="ICBM" content="40.8526, -73.9352" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://dmiguelbarbershop.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="D'Miguel Barber Shop | Washington Heights NYC" />
@@ -18,7 +20,11 @@
   <meta property="og:url" content="https://dmiguelbarbershop.com/" />
   <meta property="og:image" content="https://dmiguelbarbershop.com/assets/images/logo.png" />
   <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_US" />
+  <link rel="preload" href="assets/images/logo.png" as="image" fetchpriority="high" />
   <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="32x32" />
+  <!-- Taxi verde (Boro NYC): ver assets/TLC-REFERENCE.txt y nyc.gov/site/tlc -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/taxi-favicon.svg" />
   <link rel="apple-touch-icon" href="assets/images/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +33,7 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "BarberShop",
     "name": "D'Miguel Barber Shop",
     "image": "assets/images/logo.png",
     "description": "Trendy barber shop in Washington Heights NYC, specializing in haircuts, beard shaping, micro pigmentation, braids, manicures, and pedicures.",
@@ -36,7 +42,13 @@
       "streetAddress": "1644 St Nicholas Ave",
       "addressLocality": "New York",
       "addressRegion": "NY",
-      "postalCode": "10040"
+      "postalCode": "10040",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "New York",
+      "containedInPlace": { "@type": "State", "name": "New York" }
     },
     "geo": {
       "@type": "GeoCoordinates",
@@ -60,7 +72,12 @@
       "ratingValue": "5.0",
       "reviewCount": "5",
       "bestRating": "5"
-    }
+    },
+    "review": [
+      { "@type": "Review", "author": { "@type": "Person", "name": "Miguel Sarante" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Un ambiente agradable para todo público, una vibra 100% positiva" },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Branlis barber" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Excelente servicio lo recomiendo 100%. Excellent service, I recommend it 100%" }
+    ],
+    "sameAs": ["https://www.instagram.com/d_miguel_barbershop/"]
   }
   </script>
 </head>
@@ -83,11 +100,14 @@
           </div>
         </div>
         <ul class="nav-list">
+          <li><a href="#home"><span class="i18n-en">Home</span><span class="i18n-es">Inicio</span></a></li>
           <li><a href="#services"><span class="i18n-en">Services</span><span class="i18n-es">Servicios</span></a></li>
           <li><a href="#book"><span class="i18n-en">Book</span><span class="i18n-es">Reservar</span></a></li>
+          <li><a href="#how-book"><span class="i18n-en">How to book</span><span class="i18n-es">Cómo reservar</span></a></li>
+          <li><a href="#why-us"><span class="i18n-en">Why us</span><span class="i18n-es">Por qué nosotros</span></a></li>
           <li><a href="#reviews"><span class="i18n-en">Reviews</span><span class="i18n-es">Opiniones</span></a></li>
           <li><a href="#gallery"><span class="i18n-en">Gallery</span><span class="i18n-es">Galería</span></a></li>
-          <li><a href="#location"><span class="i18n-en">Location</span><span class="i18n-es">Ubicación</span></a></li>
+          <li><a href="#location"><span class="i18n-en">Contact</span><span class="i18n-es">Contacto</span></a></li>
           <li><a href="tel:+13479016180" class="nav-cta">Call Now</a></li>
         </ul>
       </div>
@@ -100,11 +120,19 @@
   </header>
 
   <main id="main">
-    <section class="hero">
+    <section id="home" class="hero">
       <div class="hero-bg"></div>
       <div class="hero-content container">
         <img src="assets/images/barber-pole-icon.png" alt="" class="hero-icon" width="80" height="80" aria-hidden="true" />
         <img src="assets/images/logo.png" alt="D'Miguel Barber Shop" class="hero-logo" width="200" height="75" />
+        <div class="hero-taxi-row">
+          <img src="assets/images/taxi-boro-green.svg" alt="" class="hero-taxi" width="160" height="45" aria-hidden="true" />
+          <p class="hero-taxi-caption">
+            <span class="i18n-en">Washington Heights &amp; Upper Manhattan — same uptown energy as the <strong>green Boro Taxis</strong> you see in northern NYC.</span>
+            <span class="i18n-es">Washington Heights y el norte de Manhattan — la misma energía que los <strong>taxis verdes</strong> del norte de la ciudad.</span>
+            <a href="https://www.nyc.gov/site/tlc/index.page" target="_blank" rel="noopener noreferrer" class="tlc-link">NYC TLC</a>
+          </p>
+        </div>
         <p class="hero-location">Washington Heights, NYC</p>
         <h1 class="hero-title">Cortes que hablan</h1>
         <p class="hero-subtitle">Haircuts, beard shaping, braids, micro pigmentation & more. Dominican barbershop in NYC.</p>
@@ -124,6 +152,14 @@
           <a href="#book" class="btn btn-primary"><span class="i18n-en">Book Appointment</span><span class="i18n-es">Reservar cita</span></a>
           <a href="tel:+13479016180" class="btn btn-secondary">Call Now</a>
         </div>
+      </div>
+    </section>
+
+    <section class="section intro" aria-labelledby="intro-heading">
+      <div class="container">
+        <img src="assets/images/logo.png" alt="" class="intro-logo" width="200" height="75" loading="eager" />
+        <h2 id="intro-heading" class="intro-title"><span class="i18n-en">Welcome to D'Miguel Barber Shop</span><span class="i18n-es">Bienvenido a D'Miguel Barber Shop</span></h2>
+        <p class="intro-text"><span class="i18n-en">Trendy barbershop in <strong>Washington Heights</strong>, NYC — Dominican-style cuts, fades, beard work, braids, micro pigmentation, and nails. Walk-ins welcome; book by WhatsApp or Booksy when you have a link. Positive vibe, professional service.</span><span class="i18n-es">Barbería de moda en <strong>Washington Heights</strong>, NYC — cortes dominicanos, fades, barba, trenzas, micropigmentación y uñas. Sin cita bienvenidos; reserva por WhatsApp o Booksy cuando tengas el enlace. Buena vibra y servicio profesional.</span></p>
       </div>
     </section>
 
@@ -162,14 +198,42 @@
       </div>
     </section>
 
+    <section id="why-us" class="section section-why">
+      <div class="container">
+        <h2 class="section-title"><span class="i18n-en">Why D'Miguel Barber Shop</span><span class="i18n-es">Por qué D'Miguel Barber Shop</span></h2>
+        <p class="section-subtitle"><span class="i18n-en">What neighbors and clients value — inspired by the best local barbershop sites.</span><span class="i18n-es">Lo que valoran vecinos y clientes — como las mejores barberías del barrio.</span></p>
+        <ul class="why-list">
+          <li><span class="i18n-en"><strong>Skill &amp; style.</strong> Fades, braids, beard shaping, and micro pigmentation — barbers who know their craft.</span><span class="i18n-es"><strong>Técnica y estilo.</strong> Fades, trenzas, barba y micropigmentación — barberos que dominan el oficio.</span></li>
+          <li><span class="i18n-en"><strong>Clean &amp; welcoming.</strong> A positive, inclusive vibe for everyone who walks in.</span><span class="i18n-es"><strong>Limpieza y buen ambiente.</strong> Vibra positiva e inclusiva para todos.</span></li>
+          <li><span class="i18n-en"><strong>Flexible booking.</strong> WhatsApp requests with confirmation, or Booksy for live openings — one calendar, no double bookings.</span><span class="i18n-es"><strong>Reservas flexibles.</strong> WhatsApp con confirmación, o Booksy para huecos libres — un calendario, sin dobles reservas.</span></li>
+          <li><span class="i18n-en"><strong>Upper Manhattan roots.</strong> 1644 St Nicholas Ave — easy to reach in Washington Heights.</span><span class="i18n-es"><strong>Raíces en el norte de Manhattan.</strong> 1644 St Nicholas Ave — fácil de llegar en Washington Heights.</span></li>
+        </ul>
+        <div class="section-cta-row">
+          <a href="https://wa.me/13479016180?text=Hi%2C%20I%27d%20like%20to%20book%20at%20D%27Miguel%20Barber%20Shop" class="btn btn-primary" target="_blank" rel="noopener"><span class="i18n-en">WhatsApp us</span><span class="i18n-es">Escríbenos por WhatsApp</span></a>
+          <a href="#book" class="btn btn-outline"><span class="i18n-en">Book form</span><span class="i18n-es">Formulario de reserva</span></a>
+        </div>
+      </div>
+    </section>
+
     <section id="book" class="section booking">
       <div class="container">
         <img src="assets/images/barber-pole-icon.png" alt="" class="section-icon" width="56" height="56" aria-hidden="true" />
         <h2 class="section-title"><span class="i18n-en">Book Your Visit</span><span class="i18n-es">Reserva tu visita</span></h2>
-        <div class="how-it-works">
+        <p class="section-subtitle booking-lead"><span class="i18n-en">Book online with real-time openings on <a href="https://booksy.com/" target="_blank" rel="noopener">Booksy</a> when you have a link, or send your request by WhatsApp—we confirm against the same schedule.</span><span class="i18n-es">Reserva con horarios en vivo en <a href="https://booksy.com/" target="_blank" rel="noopener">Booksy</a> cuando tengas el enlace, o envía tu solicitud por WhatsApp: confirmamos con el mismo calendario.</span></p>
+        <div class="how-it-works" id="how-book">
           <p class="how-it-works-title"><span class="i18n-en">How it works</span><span class="i18n-es">Cómo funciona</span></p>
           <p class="how-it-works-text"><span class="i18n-en">You send your preferred date and time; we reply by WhatsApp to confirm. If that slot is already taken with your barber, we'll suggest the nearest available time—no double bookings.</span><span class="i18n-es">Envías fecha y hora preferidas; te respondemos por WhatsApp para confirmar. Si ese hueco ya está ocupado con tu barbero, te sugerimos la hora disponible más cercana.</span></p>
         </div>
+        <ol class="how-to-steps" aria-label="Booking steps">
+          <li><span class="i18n-en"><strong>Choose</strong> — WhatsApp request or Booksy for live openings.</span><span class="i18n-es"><strong>Elige</strong> — WhatsApp o Booksy para ver huecos libres.</span></li>
+          <li><span class="i18n-en"><strong>Send</strong> — Date, time, barber (optional), alternative time if needed.</span><span class="i18n-es"><strong>Envía</strong> — Fecha, hora, barbero (opcional), hora alternativa.</span></li>
+          <li><span class="i18n-en"><strong>Confirm</strong> — We reply on WhatsApp or your slot locks in on Booksy.</span><span class="i18n-es"><strong>Confirma</strong> — Te respondemos por WhatsApp o la cita queda en Booksy.</span></li>
+        </ol>
+        <div class="booking-booksy-panel">
+          <a href="https://wa.me/13479016180?text=Hi%2C%20please%20send%20your%20Booksy%20booking%20link." class="btn btn-booksy btn-block" id="booking-booksy-link" target="_blank" rel="noopener" data-booksy-url="https://booksy.com/en-us"><span class="booksy-btn-text">Book on Booksy</span></a>
+          <p class="booking-booksy-caption"><span class="i18n-en">Connect your live Booksy page here when ready (or tap to ask us for the link).</span><span class="i18n-es">Conecta aquí tu página Booksy cuando la tengas (o pídenos el enlace).</span></p>
+        </div>
+        <p class="booking-sync-note" role="note"><span class="i18n-en"><strong>One calendar:</strong> In <a href="https://booksy.com/en-us/for-business" target="_blank" rel="noopener">Booksy Biz</a>, sync with Google Calendar so online bookings and blocks stay aligned—clients aren’t double-booked.</span><span class="i18n-es"><strong>Un solo calendario:</strong> En Booksy Biz puedes sincronizar con Google Calendar para evitar dobles reservas.</span></p>
         <form class="booking-form" id="booking-form">
           <label for="date">Preferred date</label>
           <input type="date" id="date" name="date" required />
@@ -199,23 +263,27 @@
 
     <section id="reviews" class="section reviews">
       <div class="container">
+        <p class="reviews-badge" aria-hidden="true">★★★★★</p>
         <h2 class="section-title"><span class="i18n-en">What Clients Say</span><span class="i18n-es">Lo que dicen los clientes</span></h2>
-        <p class="section-subtitle">Google Reviews · D'Miguel Barber Shop</p>
+        <p class="section-subtitle"><span class="i18n-en">Google Reviews · D'Miguel Barber Shop · Washington Heights</span><span class="i18n-es">Opiniones en Google · D'Miguel Barber Shop · Washington Heights</span></p>
         <div class="reviews-stars" aria-label="Rating 5 out of 5">★★★★★</div>
-        <p class="reviews-summary">5+ opinions on Google · Barbería en Nueva York</p>
-        <ul class="reviews-list">
-          <li class="review-card">
-            <div class="review-stars">★★★★★</div>
+        <p class="reviews-summary"><span class="i18n-en">5+ reviews on Google · Your feedback helps the neighborhood find us.</span><span class="i18n-es">Más de 5 opiniones en Google · Tu reseña ayuda a que el barrio nos encuentre.</span></p>
+        <div class="reviews-grid">
+          <blockquote class="review-card">
+            <div class="review-stars" aria-hidden="true">★★★★★</div>
             <p class="review-text">"Un ambiente agradable para todo público, una vibra 100% positiva"</p>
-            <p class="review-author">— Miguel Sarante</p>
-          </li>
-          <li class="review-card">
-            <div class="review-stars">★★★★★</div>
+            <footer class="review-meta"><cite class="review-author">Miguel Sarante</cite></footer>
+          </blockquote>
+          <blockquote class="review-card">
+            <div class="review-stars" aria-hidden="true">★★★★★</div>
             <p class="review-text">"Excelente servicio lo recomiendo 100%. Excellent service, I recommend it 100%"</p>
-            <p class="review-author">— Branlis barber</p>
-          </li>
-        </ul>
-        <a href="https://www.google.com/maps/place/D'Miguel+Barber+Shop" target="_blank" rel="noopener" class="btn btn-outline">See all reviews on Google</a>
+            <footer class="review-meta"><cite class="review-author">Branlis barber</cite></footer>
+          </blockquote>
+        </div>
+        <div class="reviews-cta-row">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=D%27Miguel+Barber+Shop+1644+St+Nicholas+Ave+New+York+NY+10040" target="_blank" rel="noopener" class="btn btn-outline"><span class="i18n-en">See all reviews on Google</span><span class="i18n-es">Ver todas las opiniones en Google</span></a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=D%27Miguel+Barber+Shop+1644+St+Nicholas+Ave+New+York+NY+10040" target="_blank" rel="noopener" class="btn btn-primary"><span class="i18n-en">Leave a review</span><span class="i18n-es">Deja tu reseña</span></a>
+        </div>
       </div>
     </section>
 
@@ -258,7 +326,11 @@
 
     <section id="location" class="section location">
       <div class="container">
-        <h2 class="section-title"><span class="i18n-en">Find Us</span><span class="i18n-es">Dónde estamos</span></h2>
+        <div class="location-header-row">
+          <img src="assets/images/taxi-boro-green.svg" alt="" class="location-taxi" width="120" height="34" aria-hidden="true" />
+          <h2 class="section-title"><span class="i18n-en">Find Us</span><span class="i18n-es">Dónde estamos</span></h2>
+        </div>
+        <p class="location-tlc-note"><span class="i18n-en">Green cabs in northern NYC are licensed by the <a href="https://www.nyc.gov/site/tlc/index.page" target="_blank" rel="noopener noreferrer">NYC Taxi &amp; Limousine Commission</a>. Taxi graphic is our own illustration.</span><span class="i18n-es">Los taxis verdes del norte de NYC están regulados por la <a href="https://www.nyc.gov/site/tlc/index.page" target="_blank" rel="noopener noreferrer">TLC de Nueva York</a>. El dibujo del taxi es ilustración propia.</span></p>
         <div class="location-content">
           <div class="location-info">
             <p class="location-address">
@@ -291,6 +363,16 @@
         </div>
       </div>
     </section>
+
+    <section id="contact" class="section section-contact-strip" aria-label="Contact quick links">
+      <div class="container contact-strip-inner">
+        <p class="contact-strip-text"><span class="i18n-en"><strong>Walk-ins welcome.</strong> Prefer a slot? Book via WhatsApp or Booksy above.</span><span class="i18n-es"><strong>Sin cita bienvenidos.</strong> ¿Prefieres horario? Reserva por WhatsApp o Booksy arriba.</span></p>
+        <div class="contact-strip-actions">
+          <a href="tel:+13479016180" class="btn btn-outline btn-sm">(347) 901-6180</a>
+          <a href="https://wa.me/13479016180" class="btn btn-primary btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -319,9 +401,15 @@
     </div>
   </footer>
 
-  <div class="float-actions">
-    <a href="tel:+13479016180" class="float-btn float-call" aria-label="Call Now">📞 Call</a>
-    <a href="https://wa.me/13479016180" class="float-btn float-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">WhatsApp</a>
+  <div class="float-actions" role="group" aria-label="Quick contact">
+    <a href="tel:+13479016180" class="float-btn float-call" aria-label="Call Now">
+      <span class="float-btn-label">Call</span>
+      <span class="float-btn-emoji" aria-hidden="true">📞</span>
+    </a>
+    <a href="https://wa.me/13479016180?text=Hi%2C%20I%27d%20like%20to%20book%20at%20D%27Miguel%20Barber%20Shop" class="float-btn float-whatsapp" aria-label="Book Now on WhatsApp" target="_blank" rel="noopener">
+      <span class="float-btn-label">Book Now</span>
+      <svg class="whatsapp-float-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
   </div>
 
   <script src="script.js"></script>

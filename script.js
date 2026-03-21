@@ -87,4 +87,11 @@
       }
     });
   });
+
+  // Booksy: un solo lugar para la URL (data-booksy-url en #booking-booksy-link)
+  var booksyLink = document.getElementById('booking-booksy-link');
+  if (booksyLink) {
+    var bookUrl = booksyLink.getAttribute('data-booksy-url');
+    if (bookUrl) booksyLink.setAttribute('href', bookUrl);
+  }
 })();

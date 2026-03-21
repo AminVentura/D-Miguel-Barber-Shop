@@ -346,6 +346,40 @@ ul {
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
 }
 
+.hero-taxi-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto 1rem;
+  max-width: 420px;
+}
+.hero-taxi {
+  width: auto;
+  height: clamp(36px, 10vw, 45px);
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
+}
+.hero-taxi-caption {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.92);
+}
+.hero-taxi-caption strong {
+  color: #7ee0a8;
+}
+.tlc-link {
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-weight: 700;
+  color: #a7f3d0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.tlc-link:hover {
+  color: var(--white);
+}
+
 .hero-title {
   font-family: var(--font-hero);
   font-size: clamp(2rem, 8vw, 4rem);
@@ -505,6 +539,73 @@ ul {
   text-decoration: underline;
 }
 
+/* ----- Intro (El Cache10 style) ----- */
+.intro {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-border);
+  text-align: center;
+}
+.intro-logo {
+  margin: 0 auto 1.25rem;
+  height: 72px;
+  width: auto;
+  object-fit: contain;
+}
+.intro-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700;
+  color: var(--blue);
+  margin: 0 0 1rem;
+}
+.intro-text {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--gray);
+}
+
+/* ----- Why us (Los Taxistas style) ----- */
+.section-why {
+  background: var(--white);
+}
+.why-list {
+  list-style: none;
+  margin: 0 auto 2rem;
+  padding: 0;
+  max-width: 720px;
+}
+.why-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+  font-size: 0.9875rem;
+  line-height: 1.6;
+  color: var(--blue-dark);
+}
+.why-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  background: var(--red);
+  border-radius: 50%;
+}
+.section-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
 /* ----- Services ----- */
 .service-grid {
   display: grid;
@@ -602,6 +703,63 @@ ul {
   line-height: 1.5;
 }
 
+.booking-lead {
+  text-align: center;
+  margin-bottom: 1.25rem !important;
+}
+.booking-lead a {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.how-to-steps {
+  margin: 0 0 1.5rem;
+  padding-left: 1.25rem;
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.how-to-steps li {
+  margin-bottom: 0.4rem;
+}
+.how-to-steps strong {
+  color: var(--blue);
+}
+
+.booking-booksy-panel {
+  margin-bottom: 1rem;
+}
+.btn-booksy {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.2);
+}
+.btn-booksy:hover {
+  filter: brightness(1.08);
+  color: var(--white);
+}
+.booking-booksy-caption {
+  margin: 0.5rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  text-align: center;
+  line-height: 1.45;
+}
+.booking-sync-note {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+  padding: 0.85rem 1rem;
+  background: rgba(0, 45, 98, 0.05);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--blue);
+}
+.booking-sync-note a {
+  color: var(--red);
+  font-weight: 600;
+}
+
 .booking-form label {
   display: block;
   font-weight: 600;
@@ -639,6 +797,15 @@ ul {
 }
 
 /* ----- Reviews ----- */
+.reviews-badge {
+  font-size: 2rem;
+  letter-spacing: 4px;
+  color: var(--red);
+  text-align: center;
+  margin: 0 0 0.5rem;
+  line-height: 1;
+}
+
 .reviews-stars {
   font-size: 1.5rem;
   letter-spacing: 3px;
@@ -654,12 +821,20 @@ ul {
   font-size: 0.9375rem;
 }
 
-.reviews-list {
-  list-style: none;
-  margin: 0 0 1.5rem;
-  padding: 0;
+.reviews-grid {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 0 0 1.75rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .review-card {
@@ -668,6 +843,10 @@ ul {
   border-radius: var(--radius-lg);
   padding: 1.5rem;
   transition: box-shadow var(--transition);
+  margin: 0;
+}
+blockquote.review-card {
+  quotes: none;
 }
 .review-card:hover {
   box-shadow: var(--shadow-sm);
@@ -686,18 +865,79 @@ ul {
   line-height: 1.5;
 }
 
-.review-author {
+.review-meta {
   margin: 0;
   font-size: 0.9rem;
   color: var(--gray);
+}
+.review-meta cite {
   font-style: normal;
+  font-weight: 600;
 }
 
-.reviews .btn-outline {
-  display: block;
+.reviews-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.reviews-cta-row .btn {
+  min-width: 200px;
   text-align: center;
-  max-width: 280px;
-  margin: 0 auto;
+}
+
+/* ----- Contact strip (Los Taxistas) ----- */
+.section-contact-strip {
+  background: var(--blue);
+  color: var(--white);
+  padding: 2rem 0;
+  border-top: 3px solid var(--red);
+}
+.contact-strip-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .contact-strip-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+.contact-strip-text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 520px;
+  color: rgba(255,255,255,0.95);
+}
+.contact-strip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.section-contact-strip .btn-outline {
+  border-color: var(--white);
+  color: var(--white);
+}
+.section-contact-strip .btn-outline:hover {
+  background: var(--white);
+  color: var(--blue);
+}
+.section-contact-strip .btn-primary {
+  background: #25d366;
+  border-color: #25d366;
+  color: var(--white);
+}
+.section-contact-strip .btn-primary:hover {
+  background: #20bd5a;
+  border-color: #20bd5a;
+  color: var(--white);
 }
 
 /* ----- Gallery ----- */
@@ -982,6 +1222,55 @@ ul {
 .float-whatsapp:hover {
   color: var(--white);
   background: #20bd5a;
+}
+.float-btn-label {
+  white-space: nowrap;
+}
+.float-btn-emoji {
+  font-size: 1rem;
+}
+.whatsapp-float-svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .float-btn .float-btn-label {
+    display: none;
+  }
+  .float-call .float-btn-label {
+    display: inline;
+  }
+  .float-call .float-btn-emoji {
+    display: none;
+  }
+}
+
+/* Location: taxi + TLC note */
+.location-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+.location-header-row .section-title {
+  margin: 0;
+}
+.location-taxi {
+  flex-shrink: 0;
+}
+.location-tlc-note {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: 640px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.5;
+}
+.location-tlc-note a {
+  color: var(--red);
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
