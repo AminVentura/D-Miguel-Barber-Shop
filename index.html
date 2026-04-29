@@ -248,6 +248,326 @@
         <p class="booksy-note">
           Want to see real-time availability by barber (like Booksy)? <a href="https://wa.me/13479016180?text=Hi%2C%20do%20you%20have%20a%20Booksy%20or%20booking%20link%20for%20real-time%20availability%3F" target="_blank" rel="noopener">Ask us for our Booksy or booking link.</a>
         </p>
+        <div class="team-booking" aria-labelledby="team-booking-heading">
+          <h3 id="team-booking-heading" class="team-booking-title"><span class="i18n-en">Meet the Team</span><span class="i18n-es">Conoce al equipo</span></h3>
+          <p class="team-booking-subtitle"><span class="i18n-en">Add each barber's phone and Booksy link later. For now, these cards are ready so clients can request a booking online and confirm by WhatsApp.</span><span class="i18n-es">Luego puedes agregar el telefono y el enlace de Booksy de cada profesional. Por ahora, las tarjetas ya quedan listas para que el cliente solicite su cita online y confirme por WhatsApp.</span></p>
+          <div class="team-grid">
+            <article class="team-card">
+              <div class="team-card-head">
+                <p class="team-role"><span class="i18n-en">Barber</span><span class="i18n-es">Barbero</span></p>
+                <h4 class="team-name">Barbero 1</h4>
+                <p class="team-copy"><span class="i18n-en">Online booking card ready. Add phone, WhatsApp and live calendar later.</span><span class="i18n-es">Tarjeta lista para reservas online. Agrega telefono, WhatsApp y calendario en vivo despues.</span></p>
+              </div>
+              <div class="team-actions">
+                <span class="team-online-badge">Online</span>
+                <button type="button" class="btn btn-outline btn-sm team-toggle" data-target="team-form-1" aria-expanded="false">
+                  <span class="label-open"><span class="i18n-en">Book Appointment</span><span class="i18n-es">Reservar Cita</span></span>
+                  <span class="label-close"><span class="i18n-en">Hide form</span><span class="i18n-es">Ocultar formulario</span></span>
+                </button>
+              </div>
+              <form class="mini-booking-form js-whatsapp-booking-form" id="team-form-1" data-staff-name="Barbero 1" hidden>
+                <p class="mini-form-lead"><span class="i18n-en">Schedule your appointment online · Confirm by WhatsApp</span><span class="i18n-es">Agenda tu cita por internet · Confirma por WhatsApp</span></p>
+                <label for="service-1"><span class="i18n-en">Service type *</span><span class="i18n-es">Tipo de servicio *</span></label>
+                <select id="service-1" name="service" required>
+                  <option value="">Seleccione el servicio</option>
+                  <option value="Haircut / Corte">Haircut / Corte</option>
+                  <option value="Fade">Fade</option>
+                  <option value="Beard / Barba">Beard / Barba</option>
+                  <option value="Haircut + Beard / Corte + Barba">Haircut + Beard / Corte + Barba</option>
+                  <option value="Other / Otro">Other / Otro</option>
+                </select>
+                <label for="date-1"><span class="i18n-en">Date *</span><span class="i18n-es">Fecha *</span></label>
+                <input type="date" id="date-1" name="date" required />
+                <label for="time-1"><span class="i18n-en">Preferred time *</span><span class="i18n-es">Hora preferida *</span></label>
+                <input type="time" id="time-1" name="time" required />
+                <label for="name-1"><span class="i18n-en">Client name *</span><span class="i18n-es">Nombre del cliente *</span></label>
+                <input type="text" id="name-1" name="name" required placeholder="Ej: Maria Lopez" />
+                <label for="notes-1"><span class="i18n-en">Description *</span><span class="i18n-es">Descripcion *</span></label>
+                <textarea id="notes-1" name="notes" required placeholder="Ej: Lavado y secado con volumen"></textarea>
+                <button type="submit" class="btn btn-primary btn-block"><span class="i18n-en">Send booking via WhatsApp</span><span class="i18n-es">Enviar reserva por WhatsApp</span></button>
+              </form>
+            </article>
+            <article class="team-card">
+              <div class="team-card-head">
+                <p class="team-role"><span class="i18n-en">Barber</span><span class="i18n-es">Barbero</span></p>
+                <h4 class="team-name">Barbero 2</h4>
+                <p class="team-copy"><span class="i18n-en">Ready to connect direct contact details later.</span><span class="i18n-es">Lista para conectar los datos directos mas adelante.</span></p>
+              </div>
+              <div class="team-actions">
+                <span class="team-online-badge">Online</span>
+                <button type="button" class="btn btn-outline btn-sm team-toggle" data-target="team-form-2" aria-expanded="false">
+                  <span class="label-open"><span class="i18n-en">Book Appointment</span><span class="i18n-es">Reservar Cita</span></span>
+                  <span class="label-close"><span class="i18n-en">Hide form</span><span class="i18n-es">Ocultar formulario</span></span>
+                </button>
+              </div>
+              <form class="mini-booking-form js-whatsapp-booking-form" id="team-form-2" data-staff-name="Barbero 2" hidden>
+                <p class="mini-form-lead"><span class="i18n-en">Schedule your appointment online · Confirm by WhatsApp</span><span class="i18n-es">Agenda tu cita por internet · Confirma por WhatsApp</span></p>
+                <label for="service-2"><span class="i18n-en">Service type *</span><span class="i18n-es">Tipo de servicio *</span></label>
+                <select id="service-2" name="service" required>
+                  <option value="">Seleccione el servicio</option>
+                  <option value="Haircut / Corte">Haircut / Corte</option>
+                  <option value="Fade">Fade</option>
+                  <option value="Beard / Barba">Beard / Barba</option>
+                  <option value="Haircut + Beard / Corte + Barba">Haircut + Beard / Corte + Barba</option>
+                  <option value="Other / Otro">Other / Otro</option>
+                </select>
+                <label for="date-2"><span class="i18n-en">Date *</span><span class="i18n-es">Fecha *</span></label>
+                <input type="date" id="date-2" name="date" required />
+                <label for="time-2"><span class="i18n-en">Preferred time *</span><span class="i18n-es">Hora preferida *</span></label>
+                <input type="time" id="time-2" name="time" required />
+                <label for="name-2"><span class="i18n-en">Client name *</span><span class="i18n-es">Nombre del cliente *</span></label>
+                <input type="text" id="name-2" name="name" required placeholder="Ej: Maria Lopez" />
+                <label for="notes-2"><span class="i18n-en">Description *</span><span class="i18n-es">Descripcion *</span></label>
+                <textarea id="notes-2" name="notes" required placeholder="Ej: Lavado y secado con volumen"></textarea>
+                <button type="submit" class="btn btn-primary btn-block"><span class="i18n-en">Send booking via WhatsApp</span><span class="i18n-es">Enviar reserva por WhatsApp</span></button>
+              </form>
+            </article>
+            <article class="team-card">
+              <div class="team-card-head">
+                <p class="team-role"><span class="i18n-en">Barber</span><span class="i18n-es">Barbero</span></p>
+                <h4 class="team-name">Barbero 3</h4>
+                <p class="team-copy"><span class="i18n-en">Online booking placeholder for this barber.</span><span class="i18n-es">Espacio listo para la reserva online de este barbero.</span></p>
+              </div>
+              <div class="team-actions">
+                <span class="team-online-badge">Online</span>
+                <button type="button" class="btn btn-outline btn-sm team-toggle" data-target="team-form-3" aria-expanded="false">
+                  <span class="label-open"><span class="i18n-en">Book Appointment</span><span class="i18n-es">Reservar Cita</span></span>
+                  <span class="label-close"><span class="i18n-en">Hide form</span><span class="i18n-es">Ocultar formulario</span></span>
+                </button>
+              </div>
+              <form class="mini-booking-form js-whatsapp-booking-form" id="team-form-3" data-staff-name="Barbero 3" hidden>
+                <p class="mini-form-lead"><span class="i18n-en">Schedule your appointment online · Confirm by WhatsApp</span><span class="i18n-es">Agenda tu cita por internet · Confirma por WhatsApp</span></p>
+                <label for="service-3"><span class="i18n-en">Service type *</span><span class="i18n-es">Tipo de servicio *</span></label>
+                <select id="service-3" name="service" required>
+                  <option value="">Seleccione el servicio</option>
+                  <option value="Haircut / Corte">Haircut / Corte</option>
+                  <option value="Fade">Fade</option>
+                  <option value="Beard / Barba">Beard / Barba</option>
+                  <option value="Haircut + Beard / Corte + Barba">Haircut + Beard / Corte + Barba</option>
+                  <option value="Other / Otro">Other / Otro</option>
+                </select>
+                <label for="date-3"><span class="i18n-en">Date *</span><span class="i18n-es">Fecha *</span></label>
+                <input type="date" id="date-3" name="date" required />
+                <label for="time-3"><span class="i18n-en">Preferred time *</span><span class="i18n-es">Hora preferida *</span></label>
+                <input type="time" id="time-3" name="time" required />
+                <label for="name-3"><span class="i18n-en">Client name *</span><span class="i18n-es">Nombre del cliente *</span></label>
+                <input type="text" id="name-3" name="name" required placeholder="Ej: Maria Lopez" />
+                <label for="notes-3"><span class="i18n-en">Description *</span><span class="i18n-es">Descripcion *</span></label>
+                <textarea id="notes-3" name="notes" required placeholder="Ej: Lavado y secado con volumen"></textarea>
+                <button type="submit" class="btn btn-primary btn-block"><span class="i18n-en">Send booking via WhatsApp</span><span class="i18n-es">Enviar reserva por WhatsApp</span></button>
+              </form>
+            </article>
+            <article class="team-card">
+              <div class="team-card-head">
+                <p class="team-role"><span class="i18n-en">Barber</span><span class="i18n-es">Barbero</span></p>
+                <h4 class="team-name">Barbero 4</h4>
+                <p class="team-copy"><span class="i18n-en">Card prepared for direct booking requests.</span><span class="i18n-es">Tarjeta preparada para solicitudes directas de reserva.</span></p>
+              </div>
+              <div class="team-actions">
+                <span class="team-online-badge">Online</span>
+                <button type="button" class="btn btn-outline btn-sm team-toggle" data-target="team-form-4" aria-expanded="false">
+                  <span class="label-open"><span class="i18n-en">Book Appointment</span><span class="i18n-es">Reservar Cita</span></span>
+                  <span class="label-close"><span class="i18n-en">Hide form</span><span class="i18n-es">Ocultar formulario</span></span>
+                </button>
+              </div>
+              <form class="mini-booking-form js-whatsapp-booking-form" id="team-form-4" data-staff-name="Barbero 4" hidden>
+                <p class="mini-form-lead"><span class="i18n-en">Schedule your appointment online · Confirm by WhatsApp</span><span class="i18n-es">Agenda tu cita por internet · Confirma por WhatsApp</span></p>
+                <label for="service-4"><span class="i18n-en">Service type *</span><span class="i18n-es">Tipo de servicio *</span></label>
+                <select id="service-4" name="service" required>
+                  <option value="">Seleccione el servicio</option>
+                  <option value="Haircut / Corte">Haircut / Corte</option>
+                  <option value="Fade">Fade</option>
+                  <option value="Beard / Barba">Beard / Barba</option>
+                  <option value="Haircut + Beard / Corte + Barba">Haircut + Beard / Corte + Barba</option>
+                  <option value="Other / Otro">Other / Otro</option>
+                </select>
+                <label for="date-4"><span class="i18n-en">Date *</span><span class="i18n-es">Fecha *</span></label>
+                <input type="date" id="date-4" name="date" required />
+                <label for="time-4"><span class="i18n-en">Preferred time *</span><span class="i18n-es">Hora preferida *</span></label>
+                <input type="time" id="time-4" name="time" required />
+                <label for="name-4"><span class="i18n-en">Client name *</span><span class="i18n-es">Nombre del cliente *</span></label>
+                <input type="text" id="name-4" name="name" required placeholder="Ej: Maria Lopez" />
+                <label for="notes-4"><span class="i18n-en">Description *</span><span class="i18n-es">Descripcion *</span></label>
+                <textarea id="notes-4" name="notes" required placeholder="Ej: Lavado y secado con volumen"></textarea>
+                <button type="submit" class="btn btn-primary btn-block"><span class="i18n-en">Send booking via WhatsApp</span><span class="i18n-es">Enviar reserva por WhatsApp</span></button>
+              </form>
+            </article>
+            <article class="team-card">
+              <div class="team-card-head">
+                <p class="team-role"><span class="i18n-en">Barber</span><span class="i18n-es">Barbero</span></p>
+                <h4 class="team-name">Barbero 5</h4>
+                <p class="team-copy"><span class="i18n-en">Ready for individual barber profile details.</span><span class="i18n-es">Lista para agregar los detalles del perfil individual.</span></p>
+              </div>
+              <div class="team-actions">
+                <span class="team-online-badge">Online</span>
+                <button type="button" class="btn btn-outline btn-sm team-toggle" data-target="team-form-5" aria-expanded="false">
+                  <span class="label-open"><span class="i18n-en">Book Appointment</span><span class="i18n-es">Reservar Cita</span></span>
+                  <span class="label-close"><span class="i18n-en">Hide form</span><span class="i18n-es">Ocultar formulario</span></span>
+                </button>
+              </div>
+              <form class="mini-booking-form js-whatsapp-booking-form" id="team-form-5" data-staff-name="Barbero 5" hidden>
+                <p class="mini-form-lead"><span class="i18n-en">Schedule your appointment online · Confirm by WhatsApp</span><span class="i18n-es">Agenda tu cita por internet · Confirma por WhatsApp</span></p>
+                <label for="service-5"><span class="i18n-en">Service type *</span><span class="i18n-es">Tipo de servicio *</span></label>
+                <select id="service-5" name="service" required>
+                  <option value="">Seleccione el servicio</option>
+                  <option value="Haircut / Corte">Haircut / Corte</option>
+                  <option value="Fade">Fade</option>
+                  <option value="Beard / Barba">Beard / Barba</option>
+                  <option value="Haircut + Beard / Corte + Barba">Haircut + Beard / Corte + Barba</option>
+                  <option value="Other / Otro">Other / Otro</option>
+                </select>
+                <label for="date-5"><span class="i18n-en">Date *</span><span class="i18n-es">Fecha *</span></label>
+                <input type="date" id="date-5" name="date" required />
+                <label for="time-5"><span class="i18n-en">Preferred time *</span><span class="i18n-es">Hora preferida *</span></label>
+                <input type="time" id="time-5" name="time" required />
+                <label for="name-5"><span class="i18n-en">Client name *</span><span class="i18n-es">Nombre del cliente *</span></label>
+                <input type="text" id="name-5" name="name" required placeholder="Ej: Maria Lopez" />
+                <label for="notes-5"><span class="i18n-en">Description *</span><span class="i18n-es">Descripcion *</span></label>
+                <textarea id="notes-5" name="notes" required placeholder="Ej: Lavado y secado con volumen"></textarea>
+                <button type="submit" class="btn btn-primary btn-block"><span class="i18n-en">Send booking via WhatsApp</span><span class="i18n-es">Enviar reserva por WhatsApp</span></button>
+              </form>
+            </article>
+            <article class="team-card">
+              <div class="team-card-head">
+                <p class="team-role"><span class="i18n-en">Barber</span><span class="i18n-es">Barbero</span></p>
+                <h4 class="team-name">Barbero 6</h4>
+                <p class="team-copy"><span class="i18n-en">Easy to personalize with a real barber name later.</span><span class="i18n-es">Facil de personalizar luego con el nombre real del barbero.</span></p>
+              </div>
+              <div class="team-actions">
+                <span class="team-online-badge">Online</span>
+                <button type="button" class="btn btn-outline btn-sm team-toggle" data-target="team-form-6" aria-expanded="false">
+                  <span class="label-open"><span class="i18n-en">Book Appointment</span><span class="i18n-es">Reservar Cita</span></span>
+                  <span class="label-close"><span class="i18n-en">Hide form</span><span class="i18n-es">Ocultar formulario</span></span>
+                </button>
+              </div>
+              <form class="mini-booking-form js-whatsapp-booking-form" id="team-form-6" data-staff-name="Barbero 6" hidden>
+                <p class="mini-form-lead"><span class="i18n-en">Schedule your appointment online · Confirm by WhatsApp</span><span class="i18n-es">Agenda tu cita por internet · Confirma por WhatsApp</span></p>
+                <label for="service-6"><span class="i18n-en">Service type *</span><span class="i18n-es">Tipo de servicio *</span></label>
+                <select id="service-6" name="service" required>
+                  <option value="">Seleccione el servicio</option>
+                  <option value="Haircut / Corte">Haircut / Corte</option>
+                  <option value="Fade">Fade</option>
+                  <option value="Beard / Barba">Beard / Barba</option>
+                  <option value="Haircut + Beard / Corte + Barba">Haircut + Beard / Corte + Barba</option>
+                  <option value="Other / Otro">Other / Otro</option>
+                </select>
+                <label for="date-6"><span class="i18n-en">Date *</span><span class="i18n-es">Fecha *</span></label>
+                <input type="date" id="date-6" name="date" required />
+                <label for="time-6"><span class="i18n-en">Preferred time *</span><span class="i18n-es">Hora preferida *</span></label>
+                <input type="time" id="time-6" name="time" required />
+                <label for="name-6"><span class="i18n-en">Client name *</span><span class="i18n-es">Nombre del cliente *</span></label>
+                <input type="text" id="name-6" name="name" required placeholder="Ej: Maria Lopez" />
+                <label for="notes-6"><span class="i18n-en">Description *</span><span class="i18n-es">Descripcion *</span></label>
+                <textarea id="notes-6" name="notes" required placeholder="Ej: Lavado y secado con volumen"></textarea>
+                <button type="submit" class="btn btn-primary btn-block"><span class="i18n-en">Send booking via WhatsApp</span><span class="i18n-es">Enviar reserva por WhatsApp</span></button>
+              </form>
+            </article>
+            <article class="team-card">
+              <div class="team-card-head">
+                <p class="team-role"><span class="i18n-en">Barber</span><span class="i18n-es">Barbero</span></p>
+                <h4 class="team-name">Barbero 7</h4>
+                <p class="team-copy"><span class="i18n-en">Same reservation flow, ready for future direct contact info.</span><span class="i18n-es">Mismo flujo de reserva, listo para poner contacto directo despues.</span></p>
+              </div>
+              <div class="team-actions">
+                <span class="team-online-badge">Online</span>
+                <button type="button" class="btn btn-outline btn-sm team-toggle" data-target="team-form-7" aria-expanded="false">
+                  <span class="label-open"><span class="i18n-en">Book Appointment</span><span class="i18n-es">Reservar Cita</span></span>
+                  <span class="label-close"><span class="i18n-en">Hide form</span><span class="i18n-es">Ocultar formulario</span></span>
+                </button>
+              </div>
+              <form class="mini-booking-form js-whatsapp-booking-form" id="team-form-7" data-staff-name="Barbero 7" hidden>
+                <p class="mini-form-lead"><span class="i18n-en">Schedule your appointment online · Confirm by WhatsApp</span><span class="i18n-es">Agenda tu cita por internet · Confirma por WhatsApp</span></p>
+                <label for="service-7"><span class="i18n-en">Service type *</span><span class="i18n-es">Tipo de servicio *</span></label>
+                <select id="service-7" name="service" required>
+                  <option value="">Seleccione el servicio</option>
+                  <option value="Haircut / Corte">Haircut / Corte</option>
+                  <option value="Fade">Fade</option>
+                  <option value="Beard / Barba">Beard / Barba</option>
+                  <option value="Haircut + Beard / Corte + Barba">Haircut + Beard / Corte + Barba</option>
+                  <option value="Other / Otro">Other / Otro</option>
+                </select>
+                <label for="date-7"><span class="i18n-en">Date *</span><span class="i18n-es">Fecha *</span></label>
+                <input type="date" id="date-7" name="date" required />
+                <label for="time-7"><span class="i18n-en">Preferred time *</span><span class="i18n-es">Hora preferida *</span></label>
+                <input type="time" id="time-7" name="time" required />
+                <label for="name-7"><span class="i18n-en">Client name *</span><span class="i18n-es">Nombre del cliente *</span></label>
+                <input type="text" id="name-7" name="name" required placeholder="Ej: Maria Lopez" />
+                <label for="notes-7"><span class="i18n-en">Description *</span><span class="i18n-es">Descripcion *</span></label>
+                <textarea id="notes-7" name="notes" required placeholder="Ej: Lavado y secado con volumen"></textarea>
+                <button type="submit" class="btn btn-primary btn-block"><span class="i18n-en">Send booking via WhatsApp</span><span class="i18n-es">Enviar reserva por WhatsApp</span></button>
+              </form>
+            </article>
+            <article class="team-card">
+              <div class="team-card-head">
+                <p class="team-role"><span class="i18n-en">Barber</span><span class="i18n-es">Barbero</span></p>
+                <h4 class="team-name">Barbero 8</h4>
+                <p class="team-copy"><span class="i18n-en">Another ready-to-fill profile card for the team.</span><span class="i18n-es">Otra tarjeta lista para completar con el perfil del equipo.</span></p>
+              </div>
+              <div class="team-actions">
+                <span class="team-online-badge">Online</span>
+                <button type="button" class="btn btn-outline btn-sm team-toggle" data-target="team-form-8" aria-expanded="false">
+                  <span class="label-open"><span class="i18n-en">Book Appointment</span><span class="i18n-es">Reservar Cita</span></span>
+                  <span class="label-close"><span class="i18n-en">Hide form</span><span class="i18n-es">Ocultar formulario</span></span>
+                </button>
+              </div>
+              <form class="mini-booking-form js-whatsapp-booking-form" id="team-form-8" data-staff-name="Barbero 8" hidden>
+                <p class="mini-form-lead"><span class="i18n-en">Schedule your appointment online · Confirm by WhatsApp</span><span class="i18n-es">Agenda tu cita por internet · Confirma por WhatsApp</span></p>
+                <label for="service-8"><span class="i18n-en">Service type *</span><span class="i18n-es">Tipo de servicio *</span></label>
+                <select id="service-8" name="service" required>
+                  <option value="">Seleccione el servicio</option>
+                  <option value="Haircut / Corte">Haircut / Corte</option>
+                  <option value="Fade">Fade</option>
+                  <option value="Beard / Barba">Beard / Barba</option>
+                  <option value="Haircut + Beard / Corte + Barba">Haircut + Beard / Corte + Barba</option>
+                  <option value="Other / Otro">Other / Otro</option>
+                </select>
+                <label for="date-8"><span class="i18n-en">Date *</span><span class="i18n-es">Fecha *</span></label>
+                <input type="date" id="date-8" name="date" required />
+                <label for="time-8"><span class="i18n-en">Preferred time *</span><span class="i18n-es">Hora preferida *</span></label>
+                <input type="time" id="time-8" name="time" required />
+                <label for="name-8"><span class="i18n-en">Client name *</span><span class="i18n-es">Nombre del cliente *</span></label>
+                <input type="text" id="name-8" name="name" required placeholder="Ej: Maria Lopez" />
+                <label for="notes-8"><span class="i18n-en">Description *</span><span class="i18n-es">Descripcion *</span></label>
+                <textarea id="notes-8" name="notes" required placeholder="Ej: Lavado y secado con volumen"></textarea>
+                <button type="submit" class="btn btn-primary btn-block"><span class="i18n-en">Send booking via WhatsApp</span><span class="i18n-es">Enviar reserva por WhatsApp</span></button>
+              </form>
+            </article>
+            <article class="team-card">
+              <div class="team-card-head">
+                <p class="team-role"><span class="i18n-en">Braids Specialist</span><span class="i18n-es">Especialista en trenzas</span></p>
+                <h4 class="team-name">Trenzas</h4>
+                <p class="team-copy"><span class="i18n-en">Dedicated card for braids and protective styles.</span><span class="i18n-es">Tarjeta dedicada para trenzas y estilos protectores.</span></p>
+              </div>
+              <div class="team-actions">
+                <span class="team-online-badge">Online</span>
+                <button type="button" class="btn btn-outline btn-sm team-toggle" data-target="team-form-9" aria-expanded="false">
+                  <span class="label-open"><span class="i18n-en">Book Appointment</span><span class="i18n-es">Reservar Cita</span></span>
+                  <span class="label-close"><span class="i18n-en">Hide form</span><span class="i18n-es">Ocultar formulario</span></span>
+                </button>
+              </div>
+              <form class="mini-booking-form js-whatsapp-booking-form" id="team-form-9" data-staff-name="Trenzas" hidden>
+                <p class="mini-form-lead"><span class="i18n-en">Schedule your appointment online · Confirm by WhatsApp</span><span class="i18n-es">Agenda tu cita por internet · Confirma por WhatsApp</span></p>
+                <label for="service-9"><span class="i18n-en">Service type *</span><span class="i18n-es">Tipo de servicio *</span></label>
+                <select id="service-9" name="service" required>
+                  <option value="">Seleccione el servicio</option>
+                  <option value="Braids / Trenzas">Braids / Trenzas</option>
+                  <option value="Cornrows">Cornrows</option>
+                  <option value="Braids with design / Trenzas con diseno">Braids with design / Trenzas con diseno</option>
+                  <option value="Other / Otro">Other / Otro</option>
+                </select>
+                <label for="date-9"><span class="i18n-en">Date *</span><span class="i18n-es">Fecha *</span></label>
+                <input type="date" id="date-9" name="date" required />
+                <label for="time-9"><span class="i18n-en">Preferred time *</span><span class="i18n-es">Hora preferida *</span></label>
+                <input type="time" id="time-9" name="time" required />
+                <label for="name-9"><span class="i18n-en">Client name *</span><span class="i18n-es">Nombre del cliente *</span></label>
+                <input type="text" id="name-9" name="name" required placeholder="Ej: Maria Lopez" />
+                <label for="notes-9"><span class="i18n-en">Description *</span><span class="i18n-es">Descripcion *</span></label>
+                <textarea id="notes-9" name="notes" required placeholder="Ej: Lavado y secado con volumen"></textarea>
+                <button type="submit" class="btn btn-primary btn-block"><span class="i18n-en">Send booking via WhatsApp</span><span class="i18n-es">Enviar reserva por WhatsApp</span></button>
+              </form>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 

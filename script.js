@@ -33,7 +33,7 @@
   });
   if (savedLang === 'es') root.setAttribute('lang', 'es');
 
-  function buildWhatsAppMessage(form) {
+  function buildMainBookingMessage(form) {
     var date = form.querySelector('#date').value;
     var time = form.querySelector('#time').value;
     var barber = (form.querySelector('#barber').value || '').trim();
@@ -56,14 +56,55 @@
     return parts.join('\n');
   }
 
+  function buildTeamBookingMessage(form) {
+    var staffName = form.getAttribute('data-staff-name') || 'Team member';
+    var service = (form.querySelector('[name="service"]').value || '').trim();
+    var date = form.querySelector('[name="date"]').value;
+    var time = form.querySelector('[name="time"]').value;
+    var name = (form.querySelector('[name="name"]').value || '').trim();
+    var notes = (form.querySelector('[name="notes"]').value || '').trim();
+
+    return [
+      'Hola, quiero reservar una cita.',
+      'Profesional: ' + staffName,
+      'Servicio: ' + service,
+      'Fecha: ' + date,
+      'Hora preferida: ' + time,
+      'Nombre del cliente: ' + name,
+      'Descripcion: ' + notes,
+      '',
+      'Por favor confirmen por WhatsApp si este horario esta disponible.'
+    ].join('\n');
+  }
+
   var form = document.getElementById('booking-form');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var text = encodeURIComponent(buildWhatsAppMessage(form));
+      var text = encodeURIComponent(buildMainBookingMessage(form));
       window.open(WHATSAPP_BASE + '?text=' + text, '_blank', 'noopener');
     });
   }
+
+  document.querySelectorAll('.js-whatsapp-booking-form').forEach(function (teamForm) {
+    teamForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var text = encodeURIComponent(buildTeamBookingMessage(teamForm));
+      window.open(WHATSAPP_BASE + '?text=' + text, '_blank', 'noopener');
+    });
+  });
+
+  document.querySelectorAll('.team-toggle').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var targetId = button.getAttribute('data-target');
+      var target = document.getElementById(targetId);
+      if (!target) return;
+
+      var isHidden = target.hasAttribute('hidden');
+      target.toggleAttribute('hidden');
+      button.setAttribute('aria-expanded', String(isHidden));
+    });
+  });
 
   var navToggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.nav');

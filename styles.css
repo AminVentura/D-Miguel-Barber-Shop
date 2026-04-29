@@ -645,7 +645,7 @@ ul {
 
 /* ----- Booking ----- */
 .booking .container {
-  max-width: 520px;
+  max-width: 1200px;
 }
 
 .how-it-works {
@@ -760,6 +760,157 @@ ul {
 .booksy-note a {
   color: var(--red);
   font-weight: 600;
+}
+
+.team-booking {
+  margin-top: 3rem;
+}
+
+.team-booking-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--blue);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.team-booking-subtitle {
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.98rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.team-card {
+  background: var(--white);
+  border: 1px solid var(--gray-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.team-card-head {
+  margin-bottom: 1rem;
+}
+
+.team-role {
+  color: var(--red);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+
+.team-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--blue);
+  margin-bottom: 0.4rem;
+}
+
+.team-copy {
+  color: var(--gray);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.team-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.team-online-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 74px;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(0, 45, 98, 0.08);
+  color: var(--blue);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.team-toggle .label-close {
+  display: none;
+}
+
+.team-toggle[aria-expanded="true"] .label-open {
+  display: none;
+}
+
+.team-toggle[aria-expanded="true"] .label-close {
+  display: inline;
+}
+
+.mini-booking-form {
+  border-top: 1px solid var(--gray-border);
+  padding-top: 1rem;
+}
+
+.mini-form-lead {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.mini-booking-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--blue);
+  font-size: 0.9375rem;
+}
+
+.mini-booking-form input,
+.mini-booking-form select,
+.mini-booking-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  border: 1px solid var(--gray-border);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--blue-dark);
+}
+
+.mini-booking-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.mini-booking-form input:focus,
+.mini-booking-form select:focus,
+.mini-booking-form textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(0, 45, 98, 0.15);
+}
+
+@media (min-width: 640px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* ----- Reviews ----- */
